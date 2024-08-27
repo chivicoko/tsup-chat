@@ -1,0 +1,139 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif; */
+
+    
+  /* font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
+  /* font-family: "Libre Baskerville", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
+  font-family: "Jost", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  /* font-family: "Playfair Display", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
+  transition: all .3s ease;
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+}
+
+input:disabled {
+  background-color: #1e1d1d4d;
+  cursor: not-allowed;
+}
+
+button:disabled {
+  background-color: #8d44adad;
+  cursor: not-allowed;
+}
+
+body {
+  background-image: url("/bg.jpeg");
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.container {
+  width: 90vw;
+  height: 90vh;
+  color: #fff;
+  background-color: rgba(17, 25, 40, .75);
+  backdrop-filter: blur(3px) saturate(100%);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, .125);
+  display: flex;
+}
+
+
+.message {
+  max-width: 70%;
+  display: flex;
+  gap: 20px;
+
+  &.own {
+      align-self: flex-end;
+
+      .texts {
+          p {
+              background-color: #8d44ad66;
+          }
+      }
+  }
+
+  img {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      object-fit: cover;
+  }
+
+  .texts {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+
+      img {
+          width: 100%;
+          height: 300px;
+          object-fit: cover;
+          border-radius: 10px;
+      }
+
+      p {
+          padding: 20px;
+          background-color: rgba(17, 25, 40, .3);
+          border-radius: 10px;
+      }
+
+      span {
+          font-size: 13px;
+      }
+  }
+}
+
+.loading {
+  padding: 50px;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+  border-radius: 50%;
+  background-color: rgba(17, 25, 40, 0.566);
+}
+
+/* For WebKit browsers */
+::-webkit-scrollbar {
+  width: 5px; /* Width of the scrollbar */
+  display: none;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgba(17, 25, 40, .75);
+  backdrop-filter: blur(19px) saturate(180%);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888; /* Color of the scrollbar thumb */
+  border-radius: 10px; /* Rounded corners of the scrollbar thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Color of the scrollbar thumb on hover */
+}
+
+/* For Firefox */
+/* html {
+  scrollbar-width: thin;
+  scrollbar-width: 0;
+  scrollbar-color: #888 #f1f1f1;
+} */
